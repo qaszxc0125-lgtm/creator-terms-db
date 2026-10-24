@@ -62,6 +62,7 @@ Zero-cost deployment
 - Canva AI: source link now points to Canva's Japanese AI page with a direct commercial-use explanation; exact AI limits are treated as variable rather than a fixed guaranteed quota.
 
 - ai-tool-affiliate-programs.html: official-source comparison of AI tool affiliate/creator programs, eligibility and current application status
+- ai-tool-affiliate-start-guide.html: beginner guide covering content preparation, application checks, disclosure, and measurement for AI-tool affiliate marketing
 
 2026-10-24 affiliate program review
 - Runway: official affiliate page lists $15 per new paid subscriber, a 25% discount code for referred users, and an application/review process. Bank-country payment eligibility should be confirmed during application.
@@ -75,3 +76,9 @@ Zero-cost deployment
 2026-10-24 Gemini source review
 - Gemini Apps official help: use is subject to Google Terms and Prohibited Use Policy; users should avoid third-party copyright/privacy violations and exercise judgment before publishing or using generated content. Work/school accounts may have different terms.
 - The database keeps Google Gemini image generation as `commercial: unknown` because the cited official help does not expressly establish blanket permission for all commercial or stock-sale uses. API users should separately review Gemini API terms.
+
+
+2026-10-24 affiliate onboarding guide
+- Added a beginner-focused article explaining how to prepare useful content, verify official program terms, disclose affiliate relationships, and measure results.
+- Linked the new guide from the homepage and the affiliate-program comparison page, and added it to sitemap.xml.
+- No affiliate tracking links, analytics tags, or claims of program approval were added.
