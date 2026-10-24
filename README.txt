@@ -36,3 +36,10 @@ Zero-cost deployment
 - Recraft：Freeの最大30クレジット/日、無料生成物の公開・商用利用不可、生成時点のプランが権利を決める点を反映。
 - HTML埋め込みデータとdatabase.jsonを同期し、紹介報酬に関するフッター表記を更新。
 - GitHub Pages用ワークフローと、HTML/JSON同期検証スクリプトを追加。
+
+
+## Automatic official-source monitoring
+- `scripts/check_sources.py` checks the official URLs in `database.json` weekly, records HTTP status/title/normalized page-text fingerprints, and compares them with the prior baseline.
+- If a source changes or cannot be accessed, the workflow creates or updates a GitHub Issue for review and stores a downloadable report artifact.
+- This is change detection, not automated legal interpretation: the monitor never rewrites commercial-use, free-tier, or affiliate claims by itself. Review the official source and then update `database.json` and `index.html` together.
+- Workflow: `.github/workflows/source-monitor.yml`. Run it manually from the Actions tab when needed.
