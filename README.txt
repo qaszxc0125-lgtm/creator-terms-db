@@ -64,3 +64,9 @@ Zero-cost deployment
 - Canva: official help says affiliate benefits are only through Canvassador; new applications are currently closed.
 - Kling AI: official affiliate page exists, but public pages do not establish a definitive commission rate or Japan eligibility. Referral-credit benefits are distinguished from cash affiliate rewards.
 - Adobe Firefly: prior review found a waitlist-stage affiliate program; do not count it as active until public application terms are confirmed.
+
+- gemini-image-commercial-use.html: official-source guide explaining that Gemini Apps image-use terms do not establish blanket commercial/stock licensing; links to Google Help, GenAI policy, and API terms.
+
+2026-10-24 Gemini source review
+- Gemini Apps official help: use is subject to Google Terms and Prohibited Use Policy; users should avoid third-party copyright/privacy violations and exercise judgment before publishing or using generated content. Work/school accounts may have different terms.
+- The database keeps Google Gemini image generation as `commercial: unknown` because the cited official help does not expressly establish blanket permission for all commercial or stock-sale uses. API users should separately review Gemini API terms.
