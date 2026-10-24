@@ -6,7 +6,9 @@ Contents
 - ai-stock-submission-guide.html: SEO guide comparing Adobe Stock and Shutterstock AI submission rules
 - database.json: structured data for future updates
 - scripts/validate_database.py: checks count, duplicate names, and HTML/JSON synchronization
-- .github/workflows/pages.yml: validates and deploys the site to GitHub Pages on pushes to main; includes a weekly scheduled validation/deploy run
+- .github/workflows/pages.yml: validates and deploys the site to GitHub Pages when relevant site files change on main; article HTML changes now trigger deployment too.
+- sitemap.xml: lists the five public pages for search engines.
+- robots.txt: allows standard crawling and points crawlers to the sitemap.
 
 Quality notes (checked 2026-10-24)
 - Microsoft Designer: Microsoft Support FAQ describes use as personal/non-commercial; not recommended for commercial projects.
