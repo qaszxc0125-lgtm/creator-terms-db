@@ -3,9 +3,13 @@ name: Validate and deploy Creator Terms DB
 on:
   push:
     branches: [main]
+    paths:
+      - "index.html"
+      - "database.json"
+      - "README.txt"
+      - "scripts/validate_database.py"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
-  schedule:
-    - cron: "17 2 * * 1"
 
 permissions:
   contents: read
