@@ -7,7 +7,8 @@ Contents
 - database.json: structured data for future updates
 - scripts/validate_database.py: checks count, duplicate names, and HTML/JSON synchronization
 - .github/workflows/pages.yml: validates and deploys the site to GitHub Pages when relevant site files change on main; article HTML changes now trigger deployment too.
-- sitemap.xml: lists the five public pages for search engines.
+- sitemap.xml: lists the six public pages for search engines.
+- editorial-policy.html: explains editorial/update practices, affiliate disclosure approach, privacy notes, and disclaimers.
 - robots.txt: allows standard crawling and points crawlers to the sitemap.
 
 Quality notes (checked 2026-10-24)
