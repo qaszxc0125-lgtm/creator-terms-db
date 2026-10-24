@@ -3,6 +3,7 @@ Creator Terms DB — 31-record prototype
 Contents
 - index.html: standalone searchable database page (31 records)
 - ai-commercial-use-guide.html: SEO-oriented guide comparing free-tier commercial-use conditions
+- ai-stock-submission-guide.html: SEO guide comparing Adobe Stock and Shutterstock AI submission rules
 - database.json: structured data for future updates
 - scripts/validate_database.py: checks count, duplicate names, and HTML/JSON synchronization
 - .github/workflows/pages.yml: validates and deploys the site to GitHub Pages on pushes to main; includes a weekly scheduled validation/deploy run
