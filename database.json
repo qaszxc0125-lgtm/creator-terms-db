@@ -40,8 +40,8 @@
         "利用規約・使用ポリシーと禁止事項を確認",
         "AI生成物を人間が作ったものと偽って表示しない"
       ],
-      "url": "https://help.openai.com/en/articles/6783457-what-is-chatgpt",
-      "source": "OpenAI公式ヘルプ（出力の商用利用FAQ）・利用規約",
+      "url": "https://help.openai.com/ja-jp/articles/6783457-what-is-chatgpt",
+      "source": "OpenAI公式ヘルプ（出力の商用利用FAQ・日本語）・利用規約",
       "checked_date": "2026-10-24",
       "free_limit": "無料プランでも画像生成を利用可能。画像生成にはテキストチャットとは別の利用上限があり、固定回数は保証されず、上限到達時は待機が必要",
       "affiliate": "公式アフィリエイト制度は今回の公式情報確認では確定できず（未確認扱い）",
@@ -60,8 +60,8 @@
         "利用上限はプラン・機能別に確認",
         "商標・著作権・人物の権利を確認"
       ],
-      "url": "https://www.canva.com/ja_jp/ai-assistant/",
-      "source": "Canva公式日本語AI案内・Canva AI FAQ",
+      "url": "https://www.canva.com/help/new-canva-ai-faq/",
+      "source": "Canva AI公式FAQ（商用利用に関する説明）",
       "checked_date": "2026-10-24",
       "free_limit": "公式ページ記載：無料版は標準モデル最大200回、高品質モデル最大20回（AI機能共通枠。最新表示を再確認）",
       "affiliate": "公式Canvassador制度経由のみ。公式ヘルプでは新規応募受付停止中（2026-10-24確認）",
