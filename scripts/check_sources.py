@@ -32,6 +32,7 @@ def fetch_source(entry):
     result = {"name": entry.get("name", "(unnamed)"), "url": url, "checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "http_status": None, "title": "", "content_sha256": "", "error": ""}
     if not url.startswith(("https://", "http://")):
         result["error"] = "URL is missing or is not HTTP(S)"
+        result["access_class"] = "invalid_url"
         return result
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,*/*;q=0.8"})
     try:
@@ -46,13 +47,33 @@ def fetch_source(entry):
         normalized = re.sub(r"\s+", " ", " ".join(parser.parts)).strip()
         result["title"] = " ".join(parser.title_parts)[:300]
         result["content_sha256"] = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
-        if result["http_status"] >= 400: result["error"] = "HTTP status " + str(result["http_status"])
-        elif not normalized: result["error"] = "Page returned no extractable text (may be JavaScript-rendered or blocked)"
+        if result["http_status"] >= 400:
+            result["error"] = "HTTP status " + str(result["http_status"])
+            result["access_class"] = classify_status(result["http_status"])
+        elif not normalized:
+            result["error"] = "Page returned no extractable text (may be JavaScript-rendered or blocked)"
+            result["access_class"] = "extraction_blocked_or_empty"
+        else:
+            result["access_class"] = "ok"
     except urllib.error.HTTPError as exc:
         result["http_status"], result["error"] = exc.code, "HTTP status " + str(exc.code)
+        result["access_class"] = classify_status(exc.code)
     except Exception as exc:
         result["error"] = type(exc).__name__ + ": " + str(exc)[:250]
+        result["access_class"] = "network_or_client_error"
     return result
+
+def classify_status(status):
+    """Separate likely broken URLs from access controls and temporary failures."""
+    if status in (404, 410):
+        return "likely_broken_url"
+    if status in (401, 403, 407, 429):
+        return "blocked_or_rate_limited"
+    if 500 <= status <= 599:
+        return "server_error_retry"
+    if status >= 400:
+        return "http_error_review"
+    return "ok"
 
 def main():
     data = json.loads(DB_PATH.read_text(encoding="utf-8"))
@@ -77,15 +98,29 @@ def main():
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     STATE_PATH.write_text(json.dumps({"checked_at": now, "source_count": len(results), "sources": next_sources}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     alert = bool(changed or errors)
-    lines = ["# Creator Terms DB — official source check", "", "- Checked at (UTC): " + now, "- Unique source URLs checked: " + str(len(results)), "- Changed sources: " + str(len(changed)), "- Sources needing attention: " + str(len(errors)), "", "This monitor detects source-page changes and access failures. It does not automatically alter commercial-use, free-tier, or affiliate claims; review the official page before updating database records.", ""]
+    classes = {}
+    for item in errors:
+        label = item.get("access_class", "unclassified")
+        classes[label] = classes.get(label, 0) + 1
+    lines = ["# Creator Terms DB — official source check", "", "- Checked at (UTC): " + now, "- Unique source URLs checked: " + str(len(results)), "- Changed sources: " + str(len(changed)), "- Sources needing attention: " + str(len(errors)), "", "Interpretation: 404/410 are likely broken URLs; 401/403/407/429 usually indicate access restrictions or rate limits; 5xx and network errors may be temporary. A failed automated request is not proof that a source URL is dead.", "", "Error categories: " + (", ".join(label + "=" + str(count) for label, count in sorted(classes.items())) if classes else "none"), "", "This monitor detects source-page changes and access failures. It does not automatically alter commercial-use, free-tier, or affiliate claims; review the official page before updating database records.", ""]
     if changed:
         lines += ["## Changed or newly failing sources", ""]
         for item in changed:
-            lines += ["### " + item["name"], "- URL: " + item["url"], "- Change: " + item.get("change", "Needs review"), "- HTTP status: " + str(item.get("http_status")), "- Page title: " + (item.get("title") or "(not detected)"), "- Error: " + (item.get("error") or "None"), ""]
+            lines += ["### " + item["name"], "- URL: " + item["url"], "- Change: " + item.get("change", "Needs review"), "- HTTP status: " + str(item.get("http_status")), "- Access classification: " + item.get("access_class", "unclassified"), "- Page title: " + (item.get("title") or "(not detected)"), "- Error: " + (item.get("error") or "None"), ""]
     if errors:
         lines += ["## Access or extraction errors", ""]
-        for item in errors: lines.append("- **" + item["name"] + "** — " + item["url"] + " — " + item["error"])
+        for item in errors:
+            lines.append("- **" + item["name"] + "** — " + item["url"] + " — " + item.get("access_class", "unclassified") + " — " + item["error"])
         lines.append("")
+        broken = [item for item in errors if item.get("access_class") == "likely_broken_url"]
+        restricted = [item for item in errors if item.get("access_class") == "blocked_or_rate_limited"]
+        transient = [item for item in errors if item.get("access_class") in ("server_error_retry", "network_or_client_error")]
+        if broken:
+            lines += ["## Highest-priority URL checks (404/410)", ""] + ["- **" + item["name"] + "** — " + item["url"] for item in broken] + [""]
+        if restricted:
+            lines += ["## Do not label as broken without manual verification (access restrictions)", ""] + ["- **" + item["name"] + "** — " + item["url"] + " — " + item["error"] for item in restricted] + [""]
+        if transient:
+            lines += ["## Retry later (server/network failures)", ""] + ["- **" + item["name"] + "** — " + item["url"] + " — " + item["error"] for item in transient] + [""]
     if not alert: lines += ["## Result", "", "No source text changes or access errors detected against the previous baseline."]
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
     SUMMARY_PATH.write_text(json.dumps({"alert": alert, "changed_count": len(changed), "error_count": len(errors), "source_count": len(results), "checked_at": now}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
