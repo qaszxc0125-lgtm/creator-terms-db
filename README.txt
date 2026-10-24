@@ -43,3 +43,8 @@ Zero-cost deployment
 - If a source changes or cannot be accessed, the workflow creates or updates a GitHub Issue for review and stores a downloadable report artifact.
 - This is change detection, not automated legal interpretation: the monitor never rewrites commercial-use, free-tier, or affiliate claims by itself. Review the official source and then update `database.json` and `index.html` together.
 - Workflow: `.github/workflows/source-monitor.yml`. Run it manually from the Actions tab when needed.
+
+
+2026-10-24 official-source review
+- Kling AI: official Terms of Service §4.6 conflicts with official FAQ/promotional claims about free-tier commercial use. The database now marks this as unresolved and recommends written confirmation before commercial use of free outputs.
+- Krea: official pricing page confirms Free 100 units/day and a commercial license; the Creator Program is application/selection-based and may include affiliate rewards.
