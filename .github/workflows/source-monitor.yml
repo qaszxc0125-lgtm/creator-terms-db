@@ -1,0 +1,76 @@
+name: Monitor official source pages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 3 * * 1"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: source-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check official source pages
+        id: check
+        run: python3 scripts/check_sources.py
+      - name: Commit latest source-check baseline
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source-check-state.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update official source-check baseline"
+            git push
+          fi
+      - name: Create or update review issue when needed
+        if: steps.check.outputs.alert == 'true'
+        uses: actions/github-script@v7
+        env:
+          CHANGED_COUNT: ${{ steps.check.outputs.changed_count }}
+          ERROR_COUNT: ${{ steps.check.outputs.error_count }}
+        with:
+          script: |
+            const fs = require('fs');
+            const title = 'Creator Terms DB: official source review needed';
+            const report = fs.readFileSync('source-check-report.md', 'utf8');
+            const body = [
+              'The scheduled monitor detected source-page changes or access errors.',
+              '',
+              'Changed sources: ' + process.env.CHANGED_COUNT,
+              'Sources needing attention: ' + process.env.ERROR_COUNT,
+              '',
+              'Review each official source and update \`database.json\` and the embedded records in \`index.html\` together when warranted.',
+              'Do not assume that a changed page automatically changes commercial rights or affiliate eligibility.',
+              '',
+              report
+            ].join('\n');
+            const { owner, repo } = context.repo;
+            const existing = await github.rest.issues.listForRepo({ owner, repo, state: 'open', per_page: 100 });
+            const issue = existing.data.find(item => item.title === title);
+            if (issue) {
+              await github.rest.issues.update({ owner, repo, issue_number: issue.number, body });
+              core.info('Updated existing review issue #' + issue.number);
+            } else {
+              const created = await github.rest.issues.create({ owner, repo, title, body });
+              core.info('Created review issue #' + created.data.number);
+            }
+      - name: Publish monitor report as workflow artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-source-check-report
+          path: |
+            source-check-report.md
+            source-check-summary.json
+          if-no-files-found: ignore
+          retention-days: 90
