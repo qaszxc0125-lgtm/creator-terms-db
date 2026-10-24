@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "**.html"
+      - "*.html"
+      - "**/*.html"
       - "database.json"
       - "README.txt"
       - "sitemap.xml"
