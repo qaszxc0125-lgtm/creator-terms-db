@@ -26,6 +26,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validate monitor script and run unit tests
+        run: |
+          python3 -m py_compile scripts/check_sources.py
+          python3 -m unittest scripts/test_check_sources.py
       - name: Check official source pages
         id: check
         run: python3 scripts/check_sources.py
