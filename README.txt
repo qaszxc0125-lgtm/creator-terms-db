@@ -48,3 +48,8 @@ Zero-cost deployment
 2026-10-24 official-source review
 - Kling AI: official Terms of Service §4.6 conflicts with official FAQ/promotional claims about free-tier commercial use. The database now marks this as unresolved and recommends written confirmation before commercial use of free outputs.
 - Krea: official pricing page confirms Free 100 units/day and a commercial license; the Creator Program is application/selection-based and may include affiliate rewards.
+
+
+2026-10-24 source-link maintenance
+- ChatGPT: source link now points to OpenAI Help Center's explicit commercial-use FAQ, which states that outputs may be sold/reused subject to Terms and Content Policy.
+- Canva AI: source link now points to Canva's Japanese AI page with a direct commercial-use explanation; exact AI limits are treated as variable rather than a fixed guaranteed quota.
