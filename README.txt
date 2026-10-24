@@ -55,3 +55,12 @@ Zero-cost deployment
 2026-10-24 source-link maintenance
 - ChatGPT: source link now points to OpenAI Help Center's explicit commercial-use FAQ, which states that outputs may be sold/reused subject to Terms and Content Policy.
 - Canva AI: source link now points to Canva's Japanese AI page with a direct commercial-use explanation; exact AI limits are treated as variable rather than a fixed guaranteed quota.
+
+- ai-tool-affiliate-programs.html: official-source comparison of AI tool affiliate/creator programs, eligibility and current application status
+
+2026-10-24 affiliate program review
+- Runway: official affiliate page lists $15 per new paid subscriber, a 25% discount code for referred users, and an application/review process. Bank-country payment eligibility should be confirmed during application.
+- Krea: creator program is selective; affiliate rewards are possible, but exact reward details vary.
+- Canva: official help says affiliate benefits are only through Canvassador; new applications are currently closed.
+- Kling AI: official affiliate page exists, but public pages do not establish a definitive commission rate or Japan eligibility. Referral-credit benefits are distinguished from cash affiliate rewards.
+- Adobe Firefly: prior review found a waitlist-stage affiliate program; do not count it as active until public application terms are confirmed.
