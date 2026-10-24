@@ -82,3 +82,7 @@ Zero-cost deployment
 - Added a beginner-focused article explaining how to prepare useful content, verify official program terms, disclose affiliate relationships, and measure results.
 - Linked the new guide from the homepage and the affiliate-program comparison page, and added it to sitemap.xml.
 - No affiliate tracking links, analytics tags, or claims of program approval were added.
+
+
+Search Console setup
+- SEARCH-CONSOLE-SETUP.md: operator checklist for verifying the GitHub Pages URL-prefix property, submitting sitemap.xml, and reviewing search performance. Google account verification must be completed by the site owner; no placeholder token is used.
