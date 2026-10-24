@@ -42,6 +42,7 @@ Zero-cost deployment
 
 ## Automatic official-source monitoring
 - `scripts/check_sources.py` checks the official URLs in `database.json` weekly, records HTTP status/title/normalized page-text fingerprints, and compares them with the prior baseline.
+- `scripts/test_check_sources.py` tests source-error classification; the monitor workflow runs Python syntax validation and unit tests before checking URLs.
 - Access failures are classified to distinguish likely broken URLs (404/410), access restrictions or rate limits (401/403/407/429), temporary server failures (5xx), and network/client errors. A 403 is not treated as proof that a URL is dead.
 - If a source changes or cannot be accessed, the workflow creates or updates a GitHub Issue for review and stores a downloadable report artifact.
 - This is change detection, not automated legal interpretation: the monitor never rewrites commercial-use, free-tier, or affiliate claims by itself. Review the official source and then update `database.json` and `index.html` together.
