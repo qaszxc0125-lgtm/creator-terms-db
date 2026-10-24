@@ -1,6 +1,12 @@
 name: Monitor official source pages
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'database.json'
+      - 'scripts/check_sources.py'
+      - '.github/workflows/source-monitor.yml'
   workflow_dispatch:
   schedule:
     - cron: "47 3 * * 1"
