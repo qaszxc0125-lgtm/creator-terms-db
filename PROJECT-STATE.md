@@ -25,14 +25,16 @@
 - [x] `openart-commercial-use.html` を追加し、トップページからの内部リンクと `sitemap.xml` の掲載を追加。
 - [x] GitHubのmainブランチにOpenArt記事・トップページリンク・サイトマップ項目が存在することをGitHubファイル取得で確認。
 - [x] `PROJECT-STATE.md` を追加し、進捗管理をGitHubに一元化する運用ルールを記録。
+- [x] GitHub Pagesの公開成果物から `PROJECT-STATE.md` を除外する処理をデプロイワークフローに追加。
 
 ## 対応中・未解決
 
 ### 1. 公開反映の確認 — 対応中
 - GitHub上には `openart-commercial-use.html`、トップページのリンク、サイトマップ項目がある。
-- 2026-10-24に公開URL（トップページ、OpenArt記事、サイトマップ）へのアクセス確認を試みたが、この実行環境ではネットワーク/DNSの制約で取得できなかった。**これは公開サイトの障害を示す証拠ではなく、公開状態は未確認。**
-- GitHub Actionsの直近実行結果も、この実行環境からは取得できていない。
-- 次回はブラウザで公開記事URL、トップページ、公開サイトマップを実際に開いて確認し、GitHub Actionsの直近実行も確認する。
+- GitHub Actions run [#40093920855](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40093920855) で、OpenArt記事とサイトマップを含むサイト変更の検証・デプロイが成功。
+- GitHub Actions run [#40094719986](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40094719986) で、進捗ファイルを公開成果物から除外するワークフロー変更の検証・デプロイが成功。
+- 公開URL（トップページ、OpenArt記事、サイトマップ）への直接アクセスはこの実行環境のネットワーク/DNS制約で取得できず、HTTP応答・実際のブラウザ表示は未確認。**Actionsのデプロイ成功は確認済みだが、ブラウザでの最終表示確認は未確認。**
+- 公開状態の最終確認は、ブラウザで記事URL・トップページ・サイトマップを開いて行う。
 
 ### 2. Google Search Consoleのサイトマップ取得エラー — 未解決
 - Search Consoleで「サイトマップを読み込めませんでした」と表示された履歴がある。
