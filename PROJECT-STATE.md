@@ -29,6 +29,7 @@
 - [x] 競合調査を踏まえ、`ai-commercial-use-guide.html` にYouTube・SNS収益化、クライアント納品・広告、素材販売、EC、人物・ブランド利用の用途別チェック表を追加。GitHub ActionsのHTML/DB同期検証は成功。
 - [x] 既存8件のHTMLをGitHub上で横断確認。相対内部リンクの参照先欠落なし、canonical欠落・重複なし、全HTMLのcanonicalがサイトマップ8 URLと一致し、サイトマップの参照先欠落なし。
 - [x] 用途別チェック表を追加したコミット `336870e84530fcabcb91a155351399406b0cd6a1` のGitHub Actions run [#40094987139](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40094987139) で検証・デプロイ成功を確認。
+- [x] `database.json` の31件を横断監査。登録件数と実件数が一致し、必須フィールド欠落・重複名・HTTPS以外の公式リンク・確認日未設定は検出されなかった。これはデータ構造の監査であり、31件すべての公式リンク先を実際に再訪して規約を再検証したことを意味しない。
 
 ## 対応中・未解決
 
