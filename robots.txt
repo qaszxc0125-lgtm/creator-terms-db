@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qaszxc0125-lgtm.github.io/creator-terms-db/sitemap.xml
