@@ -4,9 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "index.html"
+      - "**.html"
       - "database.json"
       - "README.txt"
+      - "sitemap.xml"
+      - "robots.txt"
       - "scripts/validate_database.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
