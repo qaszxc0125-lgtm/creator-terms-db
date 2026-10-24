@@ -27,6 +27,8 @@
 - [x] `PROJECT-STATE.md` を追加し、進捗管理をGitHubに一元化する運用ルールを記録。
 - [x] GitHub Pagesの公開成果物から `PROJECT-STATE.md` を除外する処理をデプロイワークフローに追加。
 - [x] 競合調査を踏まえ、`ai-commercial-use-guide.html` にYouTube・SNS収益化、クライアント納品・広告、素材販売、EC、人物・ブランド利用の用途別チェック表を追加。GitHub ActionsのHTML/DB同期検証は成功。
+- [x] 既存8件のHTMLをGitHub上で横断確認。相対内部リンクの参照先欠落なし、canonical欠落・重複なし、全HTMLのcanonicalがサイトマップ8 URLと一致し、サイトマップの参照先欠落なし。
+- [x] 用途別チェック表を追加したコミット `336870e84530fcabcb91a155351399406b0cd6a1` のGitHub Actions run [#40094987139](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40094987139) で検証・デプロイ成功を確認。
 
 ## 対応中・未解決
 
@@ -34,7 +36,7 @@
 - GitHub上には `openart-commercial-use.html`、トップページのリンク、サイトマップ項目がある。
 - GitHub Actions run [#40093920855](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40093920855) で、OpenArt記事とサイトマップを含むサイト変更の検証・デプロイが成功。
 - GitHub Actions run [#40094719986](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40094719986) で、進捗ファイルを公開成果物から除外するワークフロー変更の検証・デプロイが成功。
-- 公開URL（トップページ、OpenArt記事、サイトマップ）への直接アクセスはこの実行環境のネットワーク/DNS制約で取得できず、HTTP応答・実際のブラウザ表示は未確認。**Actionsのデプロイ成功は確認済みだが、ブラウザでの最終表示確認は未確認。**
+- 公開URL（トップページ、記事、サイトマップ）への直接アクセスはこの実行環境のネットワーク/DNS制約またはキャッシュ未取得で確認できず、HTTP応答・実際のブラウザ表示は未確認。**GitHub Actionsのデプロイ成功とリポジトリ内のリンク・サイトマップ整合性は確認済みだが、公開環境の最終表示は未確認。**
 - 公開状態の最終確認は、ブラウザで記事URL・トップページ・サイトマップを開いて行う。
 
 ### 2. Google Search Consoleのサイトマップ取得エラー — 未解決
@@ -76,8 +78,8 @@
 ## 次に行うこと（優先順）
 
 1. ChatGPTのプロジェクト指示欄を、GitHubを進捗管理の正本とする内容に更新する。
-2. ブラウザで公開URLのトップページ、`openart-commercial-use.html`、`sitemap.xml` を開き、実際の表示と取得を確認する。
-3. Search Consoleのサイトマップエラーを、公開状態確認後に再調査する。
+2. ユーザー側ブラウザで公開URLのトップページ、`ai-commercial-use-guide.html`、`openart-commercial-use.html`、`sitemap.xml` を開き、HTTP表示とリンク動作を確認する（この実行環境からの直接取得は失敗）。
+3. Search Consoleにログインできる状態で、サイトマップの最終読み込み日時・検出URL数・エラー詳細を確認する。リポジトリ内の監査ではHTML 8件とサイトマップ8 URLが一致し、内部リンク切れは見つからなかった。
 4. OpenArtからの審査結果を確認し、承認と専用リンク発行を別々に記録する。
 5. その後、検索流入・記事品質・内部リンクを優先して改善する。アクセス計測やアフィリエイトリンクは、必要性と無料で可能な選択肢を調べてから設定する。
 
