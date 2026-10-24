@@ -36,6 +36,7 @@ jobs:
           git add source-check-state.json
           if ! git diff --cached --quiet; then
             git commit -m "Update official source-check baseline"
+            git pull --rebase origin main
             git push
           fi
       - name: Create or update review issue when needed
