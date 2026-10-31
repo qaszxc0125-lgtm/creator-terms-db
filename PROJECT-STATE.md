@@ -1,6 +1,6 @@
 # Creator Terms DB — Project State
 
-最終更新: 2026-10-24
+最終更新: 2026-10-31
 
 このファイルを、プロジェクトの進捗・次の作業に関する正本（single source of truth）として扱う。
 新しいチャットでは、作業開始時にこのファイルと必要な関連ファイルをGitHubのmainブランチから確認する。会話の記憶や古い要約より、現在のリポジトリ状態を優先する。
@@ -63,6 +63,14 @@
 - [x] 公式ソースリンクを重点点検し、ChatGPT（画像生成）の出典を日本語版公式ヘルプへ変更、利用規約への参照も追加。Canva AIの出典も一般案内ページから商用利用FAQへ更新。公式ページの内容を確認してからリポジトリ内の参照先を修正。 GitHub Actions run [#40095805921](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40095805921) でHTML/DB同期検証とGitHub Pagesデプロイの成功を確認。
 
 - [x] `chatgpt-image-commercial-use.html` を新規作成。OpenAI公式ヘルプ・利用規約・画像機能ヘルプを参照し、商用利用、出力の所有権と類似性、用途別確認、販売前チェックリスト、FAQを整理。トップページから内部リンクし、サイトマップに追加。利用規約ページの旧版表示も注意点として明記。追加後の監査でHTML 9ページ・サイトマップ9 URLが一致、全ページのcanonicalは各1件で重複なし、ローカル相対リンク切れなしを確認。GitHub Actions run [#40096087789](https://github.com/webfoundrylab/creator-terms-db/actions/runs/40096087789) でHTML/DB検証・GitHub Pagesデプロイ成功。
+
+## 2026-10-31 公式条件の再確認
+
+- [x] Pikaの公式FAQ・サポート・料金ページを再照合。Freeは商用不可。StarterはFAQ・サポートでは商用ライセンス対象とされる一方、料金ページでは対象外と表示され、公式情報間の差異が残るため要確認として記録。Creator/Fancyは商用ライセンス対象。
+- [x] Kling AIの一般利用規約4.6条と2026-10-10発効の有料サービス規約3.1.2条を照合。一般規約は書面許可なしの商用利用を禁止し、有料会員規約は会員出力の商用利用を認める。無料アカウントへの適用は確認できないため要確認として記録。
+- [x] database.json とトップページ埋め込みデータを同期し、確認日・更新日を2026-10-31に更新。
+- 公式根拠：Pika FAQ https://pika.art/faq 、サポート https://pika.art/support 、料金 https://pika.art/pricing?interval=month 、Kling一般利用規約 https://kling.ai/docs/user-policy 、有料サービス規約 https://kling.ai/docs/payment-policy
+- 注意：今回再確認したのはPika・Klingの2件のみ。残る29件は未再検証。
 
 ## 競合調査メモ（2026-10-24）
 
