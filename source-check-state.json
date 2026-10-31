@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-26T04:19:42+00:00",
+  "checked_at": "2026-10-31T01:53:05+00:00",
   "source_count": 31,
   "sources": {
     "https://helpx.adobe.com/jp/creative-cloud/apps/generative-ai/generative-credits-faq.html": {
       "name": "Adobe Firefly",
       "url": "https://helpx.adobe.com/jp/creative-cloud/apps/generative-ai/generative-credits-faq.html",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "生成クレジット FAQ | Creative Cloud",
       "content_sha256": "293e16601938ced810cc2871adc4270b2ae5aac785121ee946844d97a9d7b1fa",
@@ -15,7 +15,7 @@
     "https://helpx.adobe.com/stock/contributor/submit-your-content/submit-generative-ai-content/submit-generative-ai-content.html": {
       "name": "Adobe Stock（AI素材投稿ルール）",
       "url": "https://helpx.adobe.com/stock/contributor/submit-your-content/submit-generative-ai-content/submit-generative-ai-content.html",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 200,
       "title": "Submit AI-generated content to Adobe Stock | Stock",
       "content_sha256": "e6000fa90293c7f17b5f0ffcfdc9324351a45ece9a602599238cbe49474ef50b",
@@ -25,7 +25,7 @@
     "https://www.canva.com/help/new-canva-ai-faq/": {
       "name": "Canva AI",
       "url": "https://www.canva.com/help/new-canva-ai-faq/",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -35,7 +35,7 @@
     "https://help.openai.com/ja-jp/articles/6783457-what-is-chatgpt": {
       "name": "ChatGPT（画像生成）",
       "url": "https://help.openai.com/ja-jp/articles/6783457-what-is-chatgpt",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -45,7 +45,7 @@
     "https://clipdrop.co/": {
       "name": "Clipdrop",
       "url": "https://clipdrop.co/",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Create stunning visuals in seconds with AI.",
       "content_sha256": "2c42baa932a98ed204f69ae962e22110a8cab7b121907dec70cb65f56bbd5484",
@@ -55,7 +55,7 @@
     "https://www.craiyon.com/en": {
       "name": "Craiyon",
       "url": "https://www.craiyon.com/en",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -65,7 +65,7 @@
     "https://support.fotor.com/hc/en-us/articles/900006654446-Commercial-Use": {
       "name": "Fotor AI",
       "url": "https://support.fotor.com/hc/en-us/articles/900006654446-Commercial-Use",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -75,7 +75,7 @@
     "https://www.freepik.com/ai/docs/ai-images-copyright-and-usage-rules": {
       "name": "Freepik AI Suite",
       "url": "https://www.freepik.com/ai/docs/ai-images-copyright-and-usage-rules",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -85,10 +85,10 @@
     "https://support.google.com/gemini/answer/14286560?hl=ja": {
       "name": "Google Gemini（画像生成）",
       "url": "https://support.google.com/gemini/answer/14286560?hl=ja",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Gemini アプリで画像を生成、編集する - パソコン - Gemini アプリ ヘルプ",
-      "content_sha256": "33c22e3b9f492921c1ef0627897c4d1081ea28578101d33d43d581f0803c61e7",
+      "content_sha256": "079e465a540750eacecf3d4673e4a01509227a26828b9d5120c72276ec1f3f0a",
       "error": "",
       "access_class": "ok",
       "change": "page text changed"
@@ -96,7 +96,7 @@
     "https://labs.google/fx/ja/faq": {
       "name": "Google ImageFX",
       "url": "https://labs.google/fx/ja/faq",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 200,
       "title": "labs.google/fx",
       "content_sha256": "c8605a790edc3f537fd4a2c28777d29241a560093fb798ac64cc26284f62e6bc",
@@ -106,17 +106,18 @@
     "https://ideogram.ai/pricing/": {
       "name": "Ideogram",
       "url": "https://ideogram.ai/pricing/",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Pricing — Ideogram",
-      "content_sha256": "4e837283a9851e1f2dac21e2e026aa681815fd5619d3f28be4109a44f298523d",
+      "content_sha256": "57837a29bdb74971a1913c2987f1e2a2c924f89fe76ee0e9b4330be8abc1fd84",
       "error": "",
-      "access_class": "ok"
+      "access_class": "ok",
+      "change": "page text changed"
     },
     "https://kling.ai/docs/user-policy": {
       "name": "Kling AI",
       "url": "https://kling.ai/docs/user-policy",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 200,
       "title": "Kling AI: Next-Gen AI Video & Image Generator",
       "content_sha256": "c1d745d88fd39a0ccda255f0f203f237940a9de1e3295b22ddb73df8ebe404ea",
@@ -126,10 +127,10 @@
     "https://www.krea.ai/pricing": {
       "name": "Krea",
       "url": "https://www.krea.ai/pricing",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Krea",
-      "content_sha256": "f4f86ba73e92b785b517c6425593f2b4fb36f28194b8d97777d11bdc19b0ca9f",
+      "content_sha256": "db13193491c64cbf5ec798b22d87e160b7185c2175be4ca2f0bcc6518537b9af",
       "error": "",
       "access_class": "ok",
       "change": "page text changed"
@@ -137,7 +138,7 @@
     "https://intercom.help/leonardo-ai/en/articles/8044018-commercial-usage": {
       "name": "Leonardo.Ai",
       "url": "https://intercom.help/leonardo-ai/en/articles/8044018-commercial-usage",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Commercial Usage | Leonardo.Ai Help Center",
       "content_sha256": "c36c693daeca4b3f1ec929d92599e8fbadd92f3b14c8ae7481157aaa5738968e",
@@ -147,7 +148,7 @@
     "https://lumalabs.ai/learning-hub/licensing": {
       "name": "Luma Dream Machine",
       "url": "https://lumalabs.ai/learning-hub/licensing",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Dream Machine Guide: Licensing",
       "content_sha256": "43fa828b4dbf9bc7b17d92d7af4ccbdef3baba297fb853f4ae08e24466708c37",
@@ -157,7 +158,7 @@
     "https://support.microsoft.com/ja-jp/designer/frequently-asked-questions-about-microsoft-designer": {
       "name": "Microsoft Designer Image Creator",
       "url": "https://support.microsoft.com/ja-jp/designer/frequently-asked-questions-about-microsoft-designer",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Microsoft Designer についてよく寄せられる質問 | Microsoft Support プライバシーに関する選択のオプトアウト アイコン プライバシーに関する選択のオプトアウト アイコン",
       "content_sha256": "f4e4a40982c1de08feb8f77444c469fde93e0fb651add9f844789e47ddfa244b",
@@ -167,7 +168,7 @@
     "https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially": {
       "name": "Midjourney",
       "url": "https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -177,7 +178,7 @@
     "https://help.nightcafe.studio/portal/en/kb/articles/does-the-license-allow-me-to-sell-my-creations-or-use-them-for-commercial-purposes": {
       "name": "NightCafe",
       "url": "https://help.nightcafe.studio/portal/en/kb/articles/does-the-license-allow-me-to-sell-my-creations-or-use-them-for-commercial-purposes",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 200,
       "title": "",
       "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -187,17 +188,18 @@
     "https://openart.ai/terms/": {
       "name": "OpenArt",
       "url": "https://openart.ai/terms/",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Terms & Policies | OpenArt",
-      "content_sha256": "830202ba7b096d9fe38643923d8afc1dbd9716b9e99b4d534e17cb824c615b32",
+      "content_sha256": "816aab0270008b40ef851c993ca83624dc8c675666aa51cf3e07a8dc0c890a87",
       "error": "",
-      "access_class": "ok"
+      "access_class": "ok",
+      "change": "page text changed"
     },
     "https://help.photoroom.com/en/articles/4566325-are-photoroom-templates-and-images-free-to-use-commercially": {
       "name": "PhotoRoom AI",
       "url": "https://help.photoroom.com/en/articles/4566325-are-photoroom-templates-and-images-free-to-use-commercially",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 200,
       "title": "Are Photoroom templates and images free to use commercially? | Photoroom Help Center",
       "content_sha256": "663f0e0cfee6a9a6c2779edd52838ec53296b87c85b0c79420468b319ac94e93",
@@ -207,7 +209,7 @@
     "https://support.picsart.com/hc/en-us/articles/360004480318-Commercial-use": {
       "name": "Picsart AI",
       "url": "https://support.picsart.com/hc/en-us/articles/360004480318-Commercial-use",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -217,17 +219,18 @@
     "https://pika.art/pricing?interval=month": {
       "name": "Pika",
       "url": "https://pika.art/pricing?interval=month",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
-      "title": "Pricing — Pika Pika",
-      "content_sha256": "6a36bd680c8cfdef5dd7004e3dcb083c22184daa4f2ae92f9aa1120aa657efbe",
+      "title": "Pika Pricing: Free, Starter, Creator & Fancy Plans Pika",
+      "content_sha256": "904b8d99e56af2459e33586d8c725911e86ab03d2bae33c898595e21d2fe9f69",
       "error": "",
-      "access_class": "ok"
+      "access_class": "ok",
+      "change": "page title changed, page text changed"
     },
     "https://pixai.art/en/terms": {
       "name": "PixAI",
       "url": "https://pixai.art/en/terms",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Terms of Service | Usage Guidelines | PixAI",
       "content_sha256": "db26a39074989222968d9c3dd675429fca0193cf39830e950c3272c86cf17e6b",
@@ -237,7 +240,7 @@
     "https://pixlr.com/jp/license-and-services-agreement/": {
       "name": "Pixlr AI",
       "url": "https://pixlr.com/jp/license-and-services-agreement/",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 200,
       "title": "License and Services Agreement - Pixlr.com",
       "content_sha256": "4c4cbde59800fe4a386836b8d5c599081c931e31309364576c698056db48302a",
@@ -247,17 +250,18 @@
     "https://playgroundai.com/terms": {
       "name": "Playground AI",
       "url": "https://playgroundai.com/terms",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "",
-      "content_sha256": "91c1ac07774f35d07e24859b3ab00c14df47e4036cf3a3be366f31b6d76e8679",
+      "content_sha256": "322b6f2f0c1e7c67d926489a1306661e711e2bc58065e51deba7865d83f95a59",
       "error": "",
-      "access_class": "ok"
+      "access_class": "ok",
+      "change": "page text changed"
     },
     "https://www.recraft.ai/pricing?tab=plans": {
       "name": "Recraft",
       "url": "https://www.recraft.ai/pricing?tab=plans",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Pricing and plans - Recraft",
       "content_sha256": "1fc1ff71f5a70c2bf729caa82872a2917fac4279b74133c45e05ff9e48b8a2af",
@@ -267,7 +271,7 @@
     "https://help.runwayml.com/hc/en-us/articles/50404627334547-Free-plan-details": {
       "name": "Runway",
       "url": "https://help.runwayml.com/hc/en-us/articles/50404627334547-Free-plan-details",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -277,7 +281,7 @@
     "https://www.seaart.ai/agents": {
       "name": "SeaArt AI",
       "url": "https://www.seaart.ai/agents",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "AI Creation Agent - Turn Words into Stunning Art & Videos",
       "content_sha256": "658671d5ebaaab4d9fe418e9acbf472e0b5eeb20957238e70a96d7b5c73805c6",
@@ -287,7 +291,7 @@
     "https://www.shutterstock.com/ja/license": {
       "name": "Shutterstock AI Image Generator",
       "url": "https://www.shutterstock.com/ja/license",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:04+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
@@ -297,7 +301,7 @@
     "https://stability.ai/license": {
       "name": "Stability AI / Stable Diffusion",
       "url": "https://stability.ai/license",
-      "checked_at": "2026-10-26T04:19:40+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 200,
       "title": "Stability AI License — Stability AI",
       "content_sha256": "0851440eba218538d96fa9f2749535d69a2ca939b3484eb24bb4438ad546c6b5",
@@ -307,7 +311,7 @@
     "https://tensor.art/about/terms-of-service-new": {
       "name": "Tensor.Art",
       "url": "https://tensor.art/about/terms-of-service-new",
-      "checked_at": "2026-10-26T04:19:41+00:00",
+      "checked_at": "2026-10-31T01:53:03+00:00",
       "http_status": 403,
       "title": "",
       "content_sha256": "",
